@@ -50,7 +50,6 @@ export default class App extends Component{
       <Stack.Screen name="Auth" children={this.createDrawer} options = {{title:"Auth",headerShown:false}}/>
       <Stack.Screen name="Teacher" children={this.createTabs} options = {{headerShown:false}}/>
       <Stack.Screen name="Student" children={this.createStudentTabs} options={{headerShown:false}}/>
-      <Stack.Screen name="SignUp" children={this.createsignUpTabs} options={{headerShown:true}}/>
     </Stack.Navigator>
     );
   }
@@ -71,14 +70,6 @@ export default class App extends Component{
         <Tabs.Screen name="CheckAttendance" component={CheckAttendance}/>
         <Tabs.Screen name="CourseList" component ={CourseList}/>
       </Tabs.Navigator>
-    );
-  }
-  createsignUpTabs = ()=>{
-    return(
-    <Tabs.Navigator>
-      <Tabs.Screen name="FacultysignUp" component={FacultysignUp}/>
-      <Tabs.Screen name="StudentsignUp" component={StudentsignUp}/>
-    </Tabs.Navigator>
     );
   }
   createDrawer = () => {
