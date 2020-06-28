@@ -1,5 +1,7 @@
 /**
 *Mei hu ek udta robot doraemon
+mano ya na mano
+
  * Sample React Native App
  * https://github.com/facebook/react-native
  *
