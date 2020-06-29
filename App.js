@@ -38,9 +38,6 @@ import AddCourses from './StudentTabs/AddCourses.js';
 import MarkAttendance from './StudentTabs/MarkAttendance.js';
 import CheckAttendance from './StudentTabs/CheckAttendance.js';
 import CourseList from './StudentTabs/CourseList.js';
-import FacultysignUp from './signUpTabs/FacultysignUp.js';
-import StudentsignUp from './signUpTabs/StudentsignUp.js';
-
 
 
 const Stack = createStackNavigator();
@@ -78,9 +75,9 @@ export default class App extends Component{
   createDrawer = () => {
     return(
       <Drawer.Navigator>
+        <Drawer.Screen name="SignUp" component={SignUp} options={{ title:"SignUp" }}/>
         <Drawer.Screen name="Login" component={Login} options={{title:"Faculty Login"}}/>
         <Drawer.Screen name="LoginStudent" component={LoginStudent} options={{title:"Student Login"}}/>
-        <Drawer.Screen name="SignUp" component={SignUp} options={{ title:"SignUp" }}/>
       </Drawer.Navigator>
     );
   }
