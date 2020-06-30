@@ -38,6 +38,7 @@ import AddCourses from './StudentTabs/AddCourses.js';
 import MarkAttendance from './StudentTabs/MarkAttendance.js';
 import CheckAttendance from './StudentTabs/CheckAttendance.js';
 import CourseList from './StudentTabs/CourseList.js';
+import AdminControl from './TeacherTabs/AdminControl.js';
 
 
 const Stack = createStackNavigator();
@@ -59,6 +60,7 @@ export default class App extends Component{
     <Tabs.Navigator>
       <Tabs.Screen name="FindFreeSlots" component={FindFreeSlots}/>
       <Tabs.Screen name="TeachertTimeTable" component={TeacherTimeTable}/>
+      <Tabs.Screen name="AdminControl" component={AdminControl}/>
     </Tabs.Navigator>
     );
   }
