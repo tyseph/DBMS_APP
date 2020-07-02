@@ -218,5 +218,6 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontWeight: '100',
     fontFamily: 'Roboto-Light',
+    marginRight: 140
   },
 });
