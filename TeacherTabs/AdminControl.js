@@ -54,7 +54,7 @@ export default class AdminControl extends Component {
           <Text style={styles.TextStyle}>Set Holiday</Text>
         </LinearGradient>
         </TouchableHighlight>
-            <Text>{this.state.chosenDate}</Text>
+            <Text style={styles.TextStyle}>{this.state.chosenDate}</Text>
             <DateTimePickerModal
               isVisible={this.state.isVisible}
               mode="date"
@@ -68,7 +68,7 @@ export default class AdminControl extends Component {
           <Text style={styles.TextStyle}>Delete Holiday</Text>
         </LinearGradient>
         </TouchableHighlight>
-            <Text>{this.state.chosenDate}</Text>
+            <Text style={styles.TextStyle}>{this.state.chosenDate}</Text>
             <DateTimePickerModal
               isVisible={this.state.isVisible}
               mode="date"
@@ -93,7 +93,7 @@ export default class AdminControl extends Component {
             <Text style={styles.TextStyle}>Set Midsem</Text>
           </LinearGradient>
           </TouchableHighlight>
-              <Text>{this.state.chosenDate}</Text>
+              <Text style={styles.TextStyle}>{this.state.chosenDate}</Text>
               <DateTimePickerModal
                 isVisible={this.state.isVisible}
                 mode="date"
@@ -107,7 +107,7 @@ export default class AdminControl extends Component {
             <Text style={styles.TextStyle}>Set Endsem</Text>
           </LinearGradient>
           </TouchableHighlight>
-              <Text>{this.state.chosenDate}</Text>
+              <Text style={styles.TextStyle}>{this.state.chosenDate}</Text>
               <DateTimePickerModal
                 isVisible={this.state.isVisible}
                 mode="date"
