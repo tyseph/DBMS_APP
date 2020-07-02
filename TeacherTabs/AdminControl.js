@@ -218,7 +218,7 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontWeight: '100',
     fontFamily: 'Roboto-Light',
-    marginRight: -150,
+    marginRight: -100,
     paddingLeft: 20
   },
 });
