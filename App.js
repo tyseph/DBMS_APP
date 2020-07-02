@@ -32,7 +32,6 @@ import {
 import Login from './Login/Login.js';
 import SignUp from './Login/SignUp.js'
 import FindFreeSlots from './TeacherTabs/FindFreeSlots.js';
-import TeacherTimeTable from './TeacherTabs/TeacherTimeTable.js';
 import LoginStudent from './Login/LoginStudent.js';
 import AddCourses from './StudentTabs/AddCourses.js';
 import MarkAttendance from './StudentTabs/MarkAttendance.js';
@@ -59,7 +58,6 @@ export default class App extends Component{
     return(
     <Tabs.Navigator>
       <Tabs.Screen name="Free Slots" component={FindFreeSlots}/>
-      <Tabs.Screen name="TeachertTimeTable" component={TeacherTimeTable}/>
       <Tabs.Screen name="Admin" component={AdminControl}/>
     </Tabs.Navigator>
     );
