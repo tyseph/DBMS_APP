@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
   //  backgroundColor: '#36D6BD',
     borderRadius: 2,
     borderWidth: 0,
-    width: 130
+    width: 150,
   },
 
   TextStyle:{
