@@ -82,7 +82,7 @@ export default class AdminControl extends Component {
             </View>
         </View>
         <View style={styles.containerText}>
-      <Text style={styles.TextStyle}>Semester Dates</Text>
+      <Text style={styles.TextStyle}>Dates</Text>
       </View>
           <View style={styles.datesContainer}>
 
@@ -117,7 +117,7 @@ export default class AdminControl extends Component {
             </View>
             </View>
               <View style={styles.rightContainer}>
-              <Text style={styles.TextStyle}>Set Dates</Text>
+              <Text style={styles.TextStyle}>Current Dates</Text>
               </View>
           </View>
 
@@ -148,6 +148,7 @@ const styles = StyleSheet.create({
     //alignItems: 'center',
     width: 200,
     marginTop: 40,
+    flex: 1,
   },
 
   containerText:{
@@ -193,10 +194,12 @@ const styles = StyleSheet.create({
   {
     borderRadius: 10,
   },
+
   SubmitButtonStyle: {
 
     marginTop: 0,
     padding: 0,
+    marginLeft:0,
   //  backgroundColor: '#36D6BD',
     borderRadius: 2,
     borderWidth: 0,
