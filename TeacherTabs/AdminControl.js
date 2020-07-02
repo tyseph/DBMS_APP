@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
   },
 
   setholidays:{
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'center',
     //alignItems: 'center',
     width: 200,
