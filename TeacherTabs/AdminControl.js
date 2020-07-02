@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
   },
 
   containerText:{
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'center',
     //alignItems: 'center',
     marginTop: 20,
@@ -218,7 +218,5 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontWeight: '100',
     fontFamily: 'Roboto-Light',
-    marginRight: -100,
-    paddingLeft: 20
   },
 });
