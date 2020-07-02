@@ -155,12 +155,12 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     //alignItems: 'center',
-    marginTop: 20,
+    marginTop: 10,
   },
 
   datesContainer:{
     flex: 1,
-    marginTop: 50,
+    marginTop: 10,
     flexDirection: 'row',
     justifyContent: 'center',
     //alignItems: 'center',
