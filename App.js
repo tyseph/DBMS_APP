@@ -58,9 +58,9 @@ export default class App extends Component{
   createTabs = ()=>{
     return(
     <Tabs.Navigator>
-      <Tabs.Screen name="FindFreeSlots" component={FindFreeSlots}/>
+      <Tabs.Screen name="Free Slots" component={FindFreeSlots}/>
       <Tabs.Screen name="TeachertTimeTable" component={TeacherTimeTable}/>
-      <Tabs.Screen name="AdminControl" component={AdminControl}/>
+      <Tabs.Screen name="Admin" component={AdminControl}/>
     </Tabs.Navigator>
     );
   }
