@@ -11,7 +11,7 @@ import {
   import {Picker} from '@react-native-community/picker';
 //import { Container, Header, Content, Picker, Form } from "native-base";
 
-  
+
   export default class TeacherTimeTable extends Component{
       constructor(){
           super();
@@ -24,7 +24,7 @@ import {
               SatStartLec:'Time',SatEndLec:'Time',SatStartLab:'Time',SatEndLab:'Time',SatStartTute:'Time',SatEndTute:'Time'
           }
       }
-      
+
     render(){
         return(
             <ScrollView>
@@ -1129,9 +1129,9 @@ import {
   </View>
                 <Button title="Save To Database" onPress={()=>{this.saveToDatabase()}}/>
                 <Button title="Go to home" onPress={()=>{this.props.navigation.navigate('Auth')}} />
-                
+
             </View>
-           
+
             </ScrollView>
         )
     }
