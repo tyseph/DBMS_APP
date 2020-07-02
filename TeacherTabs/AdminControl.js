@@ -54,7 +54,7 @@ export default class AdminControl extends Component {
           <Text style={styles.TextStyle}>Set Holiday</Text>
         </LinearGradient>
         </TouchableHighlight>
-            <Text style={styles.TextStyle}>{this.state.chosenDate}</Text>
+            <Text style={styles.TextStyledate}>{this.state.chosenDate}</Text>
             <DateTimePickerModal
               isVisible={this.state.isVisible}
               mode="date"
@@ -68,7 +68,7 @@ export default class AdminControl extends Component {
           <Text style={styles.TextStyle}>Delete Holiday</Text>
         </LinearGradient>
         </TouchableHighlight>
-            <Text style={styles.TextStyle}>{this.state.chosenDate}</Text>
+            <Text style={styles.TextStyledate}>{this.state.chosenDate}</Text>
             <DateTimePickerModal
               isVisible={this.state.isVisible}
               mode="date"
@@ -93,7 +93,7 @@ export default class AdminControl extends Component {
             <Text style={styles.TextStyle}>Set Midsem</Text>
           </LinearGradient>
           </TouchableHighlight>
-              <Text style={styles.TextStyle}>{this.state.chosenDate}</Text>
+              <Text style={styles.TextStyledate}>{this.state.chosenDate}</Text>
               <DateTimePickerModal
                 isVisible={this.state.isVisible}
                 mode="date"
@@ -107,7 +107,7 @@ export default class AdminControl extends Component {
             <Text style={styles.TextStyle}>Set Endsem</Text>
           </LinearGradient>
           </TouchableHighlight>
-              <Text style={styles.TextStyle}>{this.state.chosenDate}</Text>
+              <Text style={styles.TextStyledate}>{this.state.chosenDate}</Text>
               <DateTimePickerModal
                 isVisible={this.state.isVisible}
                 mode="date"
@@ -150,17 +150,8 @@ const styles = StyleSheet.create({
     marginTop: 40,
   },
 
-  leftContainer: {
-    flex: 1,
-  //  width 500,
-  },
-
-  rightContainer: {
-    flex: 1,
-  },
-
   containerText:{
-    flexDirection: 'column',
+    flexDirection: 'row',
     justifyContent: 'center',
     //alignItems: 'center',
     marginTop: 20,
@@ -172,7 +163,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     //alignItems: 'center',
-    flexDirection: 'row'
   },
 
   logoutcontainer:{
@@ -215,10 +205,20 @@ const styles = StyleSheet.create({
 
   TextStyle:{
     color:'#fff',
-    textAlign:'center',
+    textAlign: 'center',
     fontSize: 20,
     fontWeight: '100',
     fontFamily: 'Roboto-Light'
 
+  },
+
+  TextStyledate:{
+    color:'#fff',
+    textAlign: 'right',
+    fontSize: 10,
+    fontWeight: '100',
+    fontFamily: 'Roboto-Light',
+    marginRight: -150,
+    paddingLeft: 20
   },
 });
