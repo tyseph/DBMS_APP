@@ -214,10 +214,11 @@ const styles = StyleSheet.create({
 
   TextStyledate:{
     color:'#fff',
-    textAlign: 'right',
-    fontSize: 10,
+    textAlign: 'center',
+    fontSize: 12,
     fontWeight: '100',
     fontFamily: 'Roboto-Light',
-    marginRight: 140
+    marginRight: 140,
+    paddingTop: 10
   },
 });
