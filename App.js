@@ -56,7 +56,8 @@ export default class App extends Component{
 
   createTabs = ()=>{
     return(
-    <Tabs.Navigator>
+    <Tabs.Navigator tabBarOptions={{style:{backgroundColor:'#007E7B'}, activeTintColor: "white",
+  inactiveTintColor: "white",}}>
       <Tabs.Screen name="Free Slots" component={FindFreeSlots}/>
       <Tabs.Screen name="Admin" component={AdminControl}/>
     </Tabs.Navigator>
