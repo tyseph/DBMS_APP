@@ -51,7 +51,7 @@ export default class AdminControl extends Component {
 
           <SafeAreaView style={styles.leftContainer}>
           <SafeAreaView style={styles.setholidays}>
-          <DatePicker placeholderTextColor='#fff' date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
+          <DatePicker style={{ backgroundColor:'#fff', borderRadius: 10}} date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
         <TouchableHighlight style={styles.SubmitButtonStyle} activeOpacity = { 0.5 } onPress={()=>{this.props.navigation.navigate('Login')}}>
         <LinearGradient colors={['#36D6BD','#007E7B']} start={{ x:0, y:1}} style={ styles.Linear_G }>
           <Text style={styles.TextStyle}>Set Holiday</Text>
@@ -59,7 +59,7 @@ export default class AdminControl extends Component {
         </TouchableHighlight>
           </SafeAreaView>
           <SafeAreaView style={styles.setholidays}>
-          <DatePicker placeholderTextColor='#fff' date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
+          <DatePicker style={{ backgroundColor:'#fff', borderRadius: 10}} date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
 
             <TouchableHighlight style={styles.SubmitButtonStyle} activeOpacity = { 0.5 } onPress={()=>{this.props.navigation.navigate('Login')}}>
         <LinearGradient colors={['#36D6BD','#007E7B']} start={{ x:0, y:1}} style={ styles.Linear_G }>
@@ -86,19 +86,19 @@ export default class AdminControl extends Component {
             <SafeAreaView style={styles.leftContainer}>
             <SafeAreaView style={styles.setsem}>
               <Text style={styles.TextStyleSemDates}>Set Beginning</Text>
-            <DatePicker placeholderTextColor='#fff' date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
+            <DatePicker style={{ backgroundColor:'#fff', borderRadius: 10}} date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
 
             </SafeAreaView>
 
             <SafeAreaView style={styles.setsem}>
               <Text style={styles.TextStyleSemDates}>Set Midsem</Text>
-            <DatePicker placeholderTextColor='#fff' date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
+            <DatePicker style={{ backgroundColor:'#fff', borderRadius: 10}} date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
 
             </SafeAreaView>
 
             <SafeAreaView style={styles.setsem}>
               <Text style={styles.TextStyleSemDates}>Set Endsem</Text>
-            <DatePicker placeholderTextColor='#fff' date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
+            <DatePicker style={{ backgroundColor:'#fff', borderRadius: 10}} date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
 
             </SafeAreaView>
             <TouchableHighlight style={styles.SetButtonStyle} activeOpacity = { 0.5 } onPress={()=>{this.props.navigation.navigate('Login')}}>
