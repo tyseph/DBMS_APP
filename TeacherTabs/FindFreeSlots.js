@@ -38,7 +38,7 @@ import {
           <TextInput placeholderTextColor="#fff" style = { styles.textInputdisplay_Style }/>
         </SafeAreaView>
         <SafeAreaView style={styles.FormBox}>
-          <Text style = { styles.textInput_Style }>Course Code :</Text>
+          <Text style = { styles.textInput_Style }>Day of the week :</Text>
           <TextInput placeholderTextColor="#fff" style = { styles.textInputdisplay_Style }/>
         </SafeAreaView>
         <SafeAreaView style={styles.Button_align}>
@@ -65,7 +65,7 @@ import {
       {
         flex: 1,
         justifyContent: 'space-evenly',
-        backgroundColor: '#102138'
+        backgroundColor: '#102138',
       },
 
       FormBox:
