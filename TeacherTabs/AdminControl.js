@@ -8,6 +8,7 @@ import {
   StatusBar,
   Button,
 } from 'react-native';
+import DatePicker from 'react-native-datepicker';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import moment from 'moment';
 import LinearGradient from 'react-native-linear-gradient';
@@ -42,82 +43,76 @@ export default class AdminControl extends Component {
   render() {
     return (
       <View style={styles.maincontainer}>
+
       <View style={styles.containerText}>
     <Text style={styles.TextStyle}>Holidays</Text>
     </View>
-        <View style={styles.datesContainer}>
+        <View style={styles.datesContainerTop}>
 
           <View style={styles.leftContainer}>
           <View style={styles.setholidays}>
-            <TouchableHighlight style={styles.SubmitButtonStyle} activeOpacity = { 0.5 } onPress={this.showPicker} >
+          <DatePicker date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
+        <TouchableHighlight style={styles.SubmitButtonStyle} activeOpacity = { 0.5 } onPress={()=>{this.props.navigation.navigate('Login')}}>
         <LinearGradient colors={['#36D6BD','#007E7B']} start={{ x:0, y:1}} style={ styles.Linear_G }>
           <Text style={styles.TextStyle}>Set Holiday</Text>
         </LinearGradient>
         </TouchableHighlight>
-            <Text style={styles.TextStyledate}>{this.state.chosenDate}</Text>
-            <DateTimePickerModal
-              isVisible={this.state.isVisible}
-              mode="date"
-              onConfirm={this.handlePicker}
-              onCancel={this.hidePicker}
-            />
           </View>
           <View style={styles.setholidays}>
-            <TouchableHighlight style={styles.SubmitButtonStyle} activeOpacity = { 0.5 } onPress={this.showPicker} >
+          <DatePicker date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
+
+            <TouchableHighlight style={styles.SubmitButtonStyle} activeOpacity = { 0.5 } onPress={()=>{this.props.navigation.navigate('Login')}}>
         <LinearGradient colors={['#36D6BD','#007E7B']} start={{ x:0, y:1}} style={ styles.Linear_G }>
+
           <Text style={styles.TextStyle}>Delete Holiday</Text>
         </LinearGradient>
         </TouchableHighlight>
-            <Text style={styles.TextStyledate}>{this.state.chosenDate}</Text>
-            <DateTimePickerModal
-              isVisible={this.state.isVisible}
-              mode="date"
-              onConfirm={this.handlePicker}
-              onCancel={this.hidePicker}
-            />
+
           </View>
           </View>
-            <View style={styles.rightContainer}>
-            <Text style={styles.TextStyle}>Current Holidays</Text>
+          <View style={styles.rightContainer}>
+          <Text style={styles.TextStyle}>Current Holidays</Text>
+
+            <View style={styles.rightTextHolidays}>
+            <Text style={styles.TextStyle}>Dates Here</Text>
+            </View>
             </View>
         </View>
         <View style={styles.containerText}>
-      <Text style={styles.TextStyle}>Dates</Text>
+      <Text style={styles.TextStyle}>Semester Details</Text>
       </View>
-          <View style={styles.datesContainer}>
+          <View style={styles.datesContainerBottom}>
 
             <View style={styles.leftContainer}>
-            <View style={styles.setholidays}>
-              <TouchableHighlight style={styles.SubmitButtonStyle} activeOpacity = { 0.5 } onPress={this.showPicker} >
-          <LinearGradient colors={['#36D6BD','#007E7B']} start={{ x:0, y:1}} style={ styles.Linear_G }>
-            <Text style={styles.TextStyle}>Set Midsem</Text>
-          </LinearGradient>
-          </TouchableHighlight>
-              <Text style={styles.TextStyledate}>{this.state.chosenDate}</Text>
-              <DateTimePickerModal
-                isVisible={this.state.isVisible}
-                mode="date"
-                onConfirm={this.handlePicker}
-                onCancel={this.hidePicker}
-              />
+            <View style={styles.setsem}>
+              <Text style={styles.TextStyleSemDates}>Set Beginning</Text>
+            <DatePicker date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
+
             </View>
-            <View style={styles.setholidays}>
-              <TouchableHighlight style={styles.SubmitButtonStyle} activeOpacity = { 0.5 } onPress={this.showPicker} >
-          <LinearGradient colors={['#36D6BD','#007E7B']} start={{ x:0, y:1}} style={ styles.Linear_G }>
-            <Text style={styles.TextStyle}>Set Endsem</Text>
-          </LinearGradient>
-          </TouchableHighlight>
-              <Text style={styles.TextStyledate}>{this.state.chosenDate}</Text>
-              <DateTimePickerModal
-                isVisible={this.state.isVisible}
-                mode="date"
-                onConfirm={this.handlePicker}
-                onCancel={this.hidePicker}
-              />
+
+            <View style={styles.setsem}>
+              <Text style={styles.TextStyleSemDates}>Set Midsem</Text>
+            <DatePicker date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
+
             </View>
+
+            <View style={styles.setsem}>
+              <Text style={styles.TextStyleSemDates}>Set Endsem</Text>
+            <DatePicker date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
+
             </View>
-              <View style={styles.rightContainer}>
-              <Text style={styles.TextStyle}>Current Dates</Text>
+            <TouchableHighlight style={styles.SetButtonStyle} activeOpacity = { 0.5 } onPress={()=>{this.props.navigation.navigate('Login')}}>
+            <LinearGradient colors={['#36D6BD','#007E7B']} start={{ x:0, y:1}} style={ styles.Linear_G }>
+              <Text style={styles.TextStyle}>Set Dates</Text>
+            </LinearGradient>
+            </TouchableHighlight>
+            </View>
+            <View style={styles.rightContainer}>
+            <Text style={styles.TextStyle}>Current Dates</Text>
+
+              <View style={styles.rightTextSem}>
+              <Text style={styles.TextStyle}>Dates Here</Text>
+              </View>
               </View>
           </View>
 
@@ -147,8 +142,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     //alignItems: 'center',
     width: 200,
-    marginTop: 40,
+    marginTop: 50,
     flex: 1,
+  },
+
+  setsem:{
+    flexDirection: 'column',
+    justifyContent: 'center',
+    //alignItems: 'center',
+    width: 200,
+    height: 60,
+    marginTop: 30,
+    flex: 0,
   },
 
   containerText:{
@@ -158,7 +163,16 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
 
-  datesContainer:{
+  datesContainerTop:{
+    flex: 1,
+    marginTop: 10,
+    marginBottom: 40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    //alignItems: 'center',
+  },
+
+  datesContainerBottom:{
     flex: 1,
     marginTop: 10,
     flexDirection: 'row',
@@ -175,13 +189,34 @@ const styles = StyleSheet.create({
 
     position: 'relative',
     flex: 0,
-    marginTop: 20,
+    marginTop: 150,
     padding: 0,
     backgroundColor: '#36D6BD',
     borderRadius: 10,
     borderWidth: 0,
-    width: 250
+    width: 150
   },
+
+  rightTextHolidays: {
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: 'white',
+    width: 150,
+    height: 180,
+    marginTop: 10,
+
+  },
+
+  rightTextSem: {
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: 'white',
+    width: 150,
+    height: 260,
+    marginTop: 10,
+
+  },
+
   LogoutTextStyle:{
     color:'#fff',
     textAlign:'center',
@@ -195,9 +230,22 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 
+  SetButtonStyle: {
+
+    marginTop: 30,
+    marginBottom: 0,
+    padding: 0,
+    marginLeft:0,
+  //  backgroundColor: '#36D6BD',
+    borderRadius: 2,
+    borderWidth: 0,
+    width: 150,
+  },
+
   SubmitButtonStyle: {
 
-    marginTop: 0,
+    marginTop: 10,
+    marginBottom: 0,
     padding: 0,
     marginLeft:0,
   //  backgroundColor: '#36D6BD',
@@ -212,6 +260,21 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '100',
     fontFamily: 'Roboto-Light'
+
+  },
+
+  TextStyleSemDates:{
+    color:'#fff',
+  //  textAlign: 'center',
+    fontSize: 20,
+    fontWeight: '100',
+    fontFamily: 'Roboto-Light',
+    marginTop: 10,
+    marginBottom: 10,
+    padding: 0,
+    marginLeft:0,
+  //  backgroundColor: '#36D6BD',
+
 
   },
 
