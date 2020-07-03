@@ -42,23 +42,23 @@ export default class AdminControl extends Component {
   };
   render() {
     return (
-      <View style={styles.maincontainer}>
+      <SafeAreaView style={styles.maincontainer}>
 
-      <View style={styles.containerText}>
+      <SafeAreaView style={styles.containerText}>
     <Text style={styles.TextStyle}>Holidays</Text>
-    </View>
-        <View style={styles.datesContainerTop}>
+    </SafeAreaView>
+        <SafeAreaView style={styles.datesContainerTop}>
 
-          <View style={styles.leftContainer}>
-          <View style={styles.setholidays}>
+          <SafeAreaView style={styles.leftContainer}>
+          <SafeAreaView style={styles.setholidays}>
           <DatePicker date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
         <TouchableHighlight style={styles.SubmitButtonStyle} activeOpacity = { 0.5 } onPress={()=>{this.props.navigation.navigate('Login')}}>
         <LinearGradient colors={['#36D6BD','#007E7B']} start={{ x:0, y:1}} style={ styles.Linear_G }>
           <Text style={styles.TextStyle}>Set Holiday</Text>
         </LinearGradient>
         </TouchableHighlight>
-          </View>
-          <View style={styles.setholidays}>
+          </SafeAreaView>
+          <SafeAreaView style={styles.setholidays}>
           <DatePicker date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
 
             <TouchableHighlight style={styles.SubmitButtonStyle} activeOpacity = { 0.5 } onPress={()=>{this.props.navigation.navigate('Login')}}>
@@ -68,62 +68,62 @@ export default class AdminControl extends Component {
         </LinearGradient>
         </TouchableHighlight>
 
-          </View>
-          </View>
-          <View style={styles.rightContainer}>
+          </SafeAreaView>
+          </SafeAreaView>
+          <SafeAreaView style={styles.rightContainer}>
           <Text style={styles.TextStyle}>Current Holidays</Text>
 
-            <View style={styles.rightTextHolidays}>
+            <SafeAreaView style={styles.rightTextHolidays}>
             <Text style={styles.TextStyle}>Dates Here</Text>
-            </View>
-            </View>
-        </View>
-        <View style={styles.containerText}>
+            </SafeAreaView>
+            </SafeAreaView>
+        </SafeAreaView>
+        <SafeAreaView style={styles.containerText}>
       <Text style={styles.TextStyle}>Semester Details</Text>
-      </View>
-          <View style={styles.datesContainerBottom}>
+      </SafeAreaView>
+          <SafeAreaView style={styles.datesContainerBottom}>
 
-            <View style={styles.leftContainer}>
-            <View style={styles.setsem}>
+            <SafeAreaView style={styles.leftContainer}>
+            <SafeAreaView style={styles.setsem}>
               <Text style={styles.TextStyleSemDates}>Set Beginning</Text>
             <DatePicker date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
 
-            </View>
+            </SafeAreaView>
 
-            <View style={styles.setsem}>
+            <SafeAreaView style={styles.setsem}>
               <Text style={styles.TextStyleSemDates}>Set Midsem</Text>
             <DatePicker date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
 
-            </View>
+            </SafeAreaView>
 
-            <View style={styles.setsem}>
+            <SafeAreaView style={styles.setsem}>
               <Text style={styles.TextStyleSemDates}>Set Endsem</Text>
             <DatePicker date={this.state.dateHoliday} format="YYYY-MM-DD" onDateChange={(date) => {this.setState({dateHoliday: date})}}  mode="date" placeholder="select date" />
 
-            </View>
+            </SafeAreaView>
             <TouchableHighlight style={styles.SetButtonStyle} activeOpacity = { 0.5 } onPress={()=>{this.props.navigation.navigate('Login')}}>
             <LinearGradient colors={['#36D6BD','#007E7B']} start={{ x:0, y:1}} style={ styles.Linear_G }>
               <Text style={styles.TextStyle}>Set Dates</Text>
             </LinearGradient>
             </TouchableHighlight>
-            </View>
-            <View style={styles.rightContainer}>
+            </SafeAreaView>
+            <SafeAreaView style={styles.rightContainer}>
             <Text style={styles.TextStyle}>Current Dates</Text>
 
-              <View style={styles.rightTextSem}>
+              <SafeAreaView style={styles.rightTextSem}>
               <Text style={styles.TextStyle}>Dates Here</Text>
-              </View>
-              </View>
-          </View>
+              </SafeAreaView>
+              </SafeAreaView>
+          </SafeAreaView>
 
-        <View style={styles.logoutcontainer}>
+        <SafeAreaView style={styles.logoutcontainer}>
         <TouchableHighlight style={styles.LogoutButtonStyle} activeOpacity = { 0.5 } onPress={()=>{this.props.navigation.navigate('Login')}} >
         <LinearGradient colors={['#A23434','#7E1600']} start={{ x:0, y:2}} style={ styles.Linear_G }>
           <Text style={styles.LogoutTextStyle}>LOGOUT</Text>
         </LinearGradient>
         </TouchableHighlight>
-        </View>
-      </View>
+        </SafeAreaView>
+      </SafeAreaView>
     );
   }
 }
@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
   LogoutTextStyle:{
     color:'#fff',
     textAlign:'center',
-    fontSize: 30,
+    fontSize: 15,
     fontWeight: '100',
     fontFamily: 'Roboto-Light'
 

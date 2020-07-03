@@ -38,7 +38,7 @@ import {
           <TextInput placeholderTextColor="#fff" style = { styles.textInputdisplay_Style }/>
         </SafeAreaView>
         <SafeAreaView style={styles.FormBox}>
-          <Text style = { styles.textInput_Style }>Day of the week :</Text>
+          <Text style = { styles.textInput_Style }>Day of the Week :</Text>
           <TextInput placeholderTextColor="#fff" style = { styles.textInputdisplay_Style }/>
         </SafeAreaView>
         <SafeAreaView style={styles.Button_align}>
