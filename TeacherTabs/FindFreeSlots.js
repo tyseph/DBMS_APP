@@ -34,18 +34,22 @@ import {
         return(
        <SafeAreaView style = { styles.MainContainer }>
         <SafeAreaView style={styles.FormBox}>
-          <TextInput placeholderTextColor="#fff" placeholder="Course Code"  style = { styles.textInput_Style }/>
-          <TextInput placeholderTextColor="#fff" placeholder="Day of the week" style = { styles.textInput_Style }/>
+          <Text style = { styles.textInput_Style }>Course Code :</Text>
+          <TextInput placeholderTextColor="#fff" style = { styles.textInputdisplay_Style }/>
+        </SafeAreaView>
+        <SafeAreaView style={styles.FormBox}>
+          <Text style = { styles.textInput_Style }>Course Code :</Text>
+          <TextInput placeholderTextColor="#fff" style = { styles.textInputdisplay_Style }/>
         </SafeAreaView>
         <SafeAreaView style={styles.Button_align}>
         <TouchableHighlight style={styles.SubmitButtonStyle} activeOpacity = { 0.5 } onPress={()=>{this.props.navigation.navigate('')}} >
         <LinearGradient colors={['#36D6BD','#007E7B']} start={{ x:0, y:1}} style={ styles.Linear_G }>
-          <Text style={styles.TextStyle}>FIND FREE SLOTS</Text>
+          <Text style={styles.TextStyle}>FIND</Text>
         </LinearGradient>
         </TouchableHighlight>
         <SafeAreaView style={styles.timing}>
-          <Text style={styles.textOutput}>Timings :</Text>
-        <TextInput textContentType='addressCity' placeholderTextColor="#fff" style = { styles.textOutput_Style } />
+          <Text style={styles.textOutput}>Timings</Text>
+          <Text style={styles.textOutputdisplay}>{this.state.freeTimings}</Text>
         </SafeAreaView>
 
         </SafeAreaView>
@@ -66,12 +70,23 @@ import {
 
       FormBox:
       {
+        flex: 0,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-        marginTop: -200,
+        alignItems: 'center',
+        marginTop: -150,
       },
 
       textInput_Style:
+      {
+        borderWidth: 0,
+        fontSize: 20,
+        color: '#fff',
+        fontFamily: 'Roboto-Thin',
+        paddingBottom: 0,
+      },
+
+      textInputdisplay_Style:
       {
         borderWidth: 0,
         borderBottomColor: '#fff',
@@ -81,10 +96,9 @@ import {
         width: 175,
         textAlign: 'center',
         fontFamily: 'Roboto-Thin',
-        paddingBottom: 0,
-        marginLeft: 10,
-        marginRight: 10
+        paddingBottom: 0
       },
+
       textOutput_Style:
       {
         borderWidth: 0,
@@ -103,20 +117,30 @@ import {
         fontFamily: 'Roboto-Thin',
         paddingBottom: 0,
       },
+
+      textOutputdisplay:
+      {
+        fontSize: 25,
+        color: '#fff',
+        fontFamily: 'Roboto-Thin',
+        paddingBottom: 0,
+        borderColor: '#fff',
+        borderWidth: 1,
+        height: 150,
+        width: 300
+      },
+
       timing:
       {
-        marginTop: 50,
         flex: 0,
-        flexDirection: 'row'
+        marginTop: 10
       },
       SubmitButtonStyle: {
-
-        marginTop: 50,
         padding: 0,
         backgroundColor: '#36D6BD',
         borderRadius: 10,
         borderWidth: 0,
-        width: 250
+        width: 200
       },
 
       TextStyle:{
@@ -135,15 +159,14 @@ import {
 
       Button_align:
       {
-        marginTop: -100,
-        alignItems: "center",
-        justifyContent: 'space-around'
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
+        marginTop: -100
       },
       LogoutButtonStyle: {
 
         position: 'relative',
         flex: 0,
-        marginTop: 200,
         padding: 0,
         backgroundColor: '#36D6BD',
         borderRadius: 10,
